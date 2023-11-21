@@ -1,0 +1,29 @@
+﻿@model List<Courses>
+@{
+    ViewData["Title"] = "List of Courses";
+}
+
+<div class="container">
+    <div class="row">
+       
+            @foreach (var item in Model)
+            {
+            <div class="col-md-4">
+                <div class="card" style="width: 18rem;">
+                    <img src=@item.CourseImage class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">@item.CourseName</h5>
+                        <p class="card-text">@item.CourseDesc</p>
+                        <a class="btn btn-primary" asp-action="editCourse" asp-route-id="@item.CourseId">Edit</a>
+                        <a class="btn btn-primary" asp-action="deleteCourse" asp-route-id="@item.CourseId">Delete</a>
+                    </div>
+                </div>
+            </div>
+            }
+        
+    </div>
+    
+        
+    <a class="btn btn-outline-primary" asp-action="addCourse">Add Course</a>
+
+</div>

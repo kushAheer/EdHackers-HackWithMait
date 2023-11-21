@@ -1,0 +1,38 @@
+﻿@model Courses
+@{
+    ViewData["Title"] = "Edit Page";
+
+}
+
+<div class="container-fluid">
+    <h1>Add Course</h1>
+    <form class="row g-3" asp-action="editCourse">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+        <div class="form-group">
+            <label asp-for="CourseName" class="control-label">Course Name</label>
+            <input type="text" asp-for="CourseName" class="form-control" value=@Model.CourseName/>
+            <span asp-validation-for="CourseName" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="CourseDesc" class="control-label">Course Description</label>
+            <input type="text" asp-for="CourseDesc" class="form-control" value=@Model.CourseDesc />
+            <span asp-validation-for="CourseDesc" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="SubjectName" class="control-label">Subject</label>
+            <input type="text" asp-for="SubjectName" class="form-control" value=@Model.SubjectName/>
+            <span asp-validation-for="SubjectName" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="CourseImage" class="control-label">Image Link</label>
+            <input type="text" asp-for="CourseImage" class="form-control" value=@Model.CourseImage/>
+            <span asp-validation-for="CourseImage" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <input type="submit" value="editCourse" class="btn btn-outline-success float-md-end" />
+            <a class="btn btn-outline-secondary" asp-action="Index">Show All</a>
+        </div>
+    </form>
+</div>
+

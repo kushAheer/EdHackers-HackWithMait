@@ -1,0 +1,34 @@
+﻿@* @model List<Subjects>
+@{
+    ViewData["Title"] = "List of Subjects";
+}
+
+<div class="container-fluid">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Subject Name</th>
+                <th scope="col">Description</th>
+                <th scope="col">Methods</th>
+            </tr>
+        </thead>
+        <tbody>
+            @{
+                foreach(var item in Model)
+                {
+                    <tr>
+                        <th scope="row"></th>
+                        <td>@item.SubjectName</td>
+                        <td>@item.SubjectDesc</td>
+                        <td>
+                            <button class="btn btn-outline-primary">Add</button>
+                            <button class="btn btn-outline-danger">Delete</button>
+                        </td>
+                    </tr>
+                }
+            }
+        </tbody>
+    </table>
+
+</div> *@

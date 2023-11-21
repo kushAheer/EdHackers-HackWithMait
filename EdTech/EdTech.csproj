@@ -1,0 +1,35 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\css\flex-slider.css" />
+    <None Include="wwwroot\css\fontawesome.css" />
+    <None Include="wwwroot\css\lightbox.css" />
+    <None Include="wwwroot\css\owl.css" />
+    <None Include="wwwroot\css\templatemo-eduwell-style.css" />
+    <None Include="wwwroot\js\custom.js" />
+    <None Include="wwwroot\js\isotope.js" />
+    <None Include="wwwroot\js\isotope.min.js" />
+    <None Include="wwwroot\js\lightbox.js" />
+    <None Include="wwwroot\js\owl-carousel.js" />
+    <None Include="wwwroot\js\slick-slider.js" />
+    <None Include="wwwroot\js\tabs.js" />
+    <None Include="wwwroot\js\video.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="bootstrap" Version="5.3.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.0" />
+  </ItemGroup>
+
+</Project>

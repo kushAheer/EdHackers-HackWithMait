@@ -1,0 +1,34 @@
+﻿@model Users;
+@{
+    ViewData["Title"] = "Login Page";
+    var message = TempData["ErrorMsgLogin"];
+}
+
+<div>
+    <h1>
+        Login Page
+    </h1>
+    @{
+        if (message != "")
+        {
+            <div class="alert alert-danger">@message</div>
+        }
+    }
+    <form class="row g-3" asp-action="Login">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+        <div class="form-group">
+            <label asp-for="Email" class="control-label">Enter Email</label>
+            <input type="email" asp-for="Email" class="form-control" />
+            <span asp-validation-for="Email" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Password" class="control-label">Enter Password</label>
+            <input type="password" asp-for="Password" class="form-control" />
+            <span asp-validation-for="Password" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <button type="submit">Login</button>
+        </div>
+    </form>
+</div>
